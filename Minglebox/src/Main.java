@@ -7,7 +7,7 @@ class Main {
         EventDispatcher eventDispatcher = new EventDispatcher();
         List<Coder> coders = new ArrayList<>();
         List<Buyer> buyers = new ArrayList<>();
-        List<Project> projects = new ArrayList<>();
+        List<Project> projects = new ArrayList<>(); 
         List<Bid> bids = new ArrayList<>();
         List<Project> completedProjects = new ArrayList<>();
 
