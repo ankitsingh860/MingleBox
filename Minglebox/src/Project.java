@@ -4,67 +4,62 @@ public class Project {
     private double budget;
     private boolean isOpenForBidding;
     private boolean isCompleted;
+    private Buyer buyer; // Add reference to the associated buyer
 
     public Project(String title, String description, double budget) {
         this.title = title;
         this.description = description;
         this.budget = budget;
-        this.isOpenForBidding = true; // New project is open for bidding by default
+        this.isOpenForBidding = true;
         this.isCompleted = false;
+        this.buyer = null; // Initialize buyer as null
     }
 
-    // Getter and Setter for title
     public String getTitle() {
         return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getBudget() {
+        return budget;
+    }
+
+    public boolean isOpenForBidding() {
+        return isOpenForBidding;
+    }
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public Buyer getBuyer() {
+        return buyer;
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    // Getter and Setter for description
-    public String getDescription() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    // Getter and Setter for budget
-    public double getBudget() {
-        return budget;
     }
 
     public void setBudget(double budget) {
         this.budget = budget;
     }
 
-    // Getter and Setter for isOpenForBidding
-    public boolean isOpenForBidding() {
-        return isOpenForBidding;
-    }
-
-    public void setOpenForBidding(boolean isOpenForBidding) {
-        this.isOpenForBidding = isOpenForBidding;
-    }
-    
-    public boolean isCompleted() {
-        return isCompleted;
+    public void setOpenForBidding(boolean openForBidding) {
+        isOpenForBidding = openForBidding;
     }
 
     public void setCompleted(boolean completed) {
         isCompleted = completed;
     }
-    
-    @Override
-    public String toString() {
-        return "Project{" +
-                "title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", budget=" + budget +
-                ", isOpenForBidding=" + isOpenForBidding +
-                ", isCompleted=" + isCompleted +
-                '}';
+
+    public void setBuyer(Buyer buyer) {
+        this.buyer = buyer;
     }
 }
